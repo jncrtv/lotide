@@ -8,22 +8,16 @@ const assertEqual = function(actual, expected) {
   }
 };
 
-const eqArrays = function(arr1, arr2) {
-  for (let i = 0; i < arr1.length; i++) {
-    if (arr1[i] !== arr2[i]) {
-    
-      return false;
-    }
+const tail = function(arr) {
+  
+  let newArr = [];
+  
+  for (let i = 1; i < arr.length; i++) {
+    newArr.push(arr[i]);
   }
-  return true;
+
+  return newArr;
 };
 
 
-
-
-
-
-assertEqual(eqArrays([1, 2, 3], [1, 2, 3]), true);
-assertEqual(eqArrays([1, 2, 3], [1, 0, 3]), false);
-assertEqual(eqArrays([1, 2, 3], []), false);
-assertEqual(eqArrays([], []), true);
+assertEqual(tail([5]), '');
