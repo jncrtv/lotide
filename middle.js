@@ -16,7 +16,7 @@ const assertArraysEqual = function(actual, expected) {
   }
 };
 
-const middle = function(arr){
+const middle = function(arr) {
   let length = arr.length;
   let result = [];
 
@@ -37,7 +37,7 @@ const middle = function(arr){
 
       result.push(arr[index3]);
     }
-  } 
+  }
   return result;
    
 };
