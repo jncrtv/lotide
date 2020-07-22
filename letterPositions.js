@@ -16,18 +16,9 @@ const assertArraysEqual = function(actual, expected) {
   }
 };
 
-const assertEqual = function(actual, expected) {
-  let checkmark = String.fromCodePoint(0x2705);
-  let errormark = String.fromCodePoint(0x274C);
-  if (actual === expected) {
-    console.log(`${checkmark} Assertion Passed: ${actual} === ${expected}`);
-  } else {
-    console.log(`${errormark} Assertion Failed: ${actual} !== ${expected}`);
-  }
-};
 
 //find index of letter and return in an object
-const letterPositions = function(sentence){
+const letterPositions = function(sentence) {
 
   //pass on to strArray to remove whitespace
   let tempArr = sentence.split('');
@@ -42,10 +33,14 @@ const letterPositions = function(sentence){
   //initialize object result
   const result = {};
 
-  for(let i = 0; i < strArray.length; i++){
-    if (!result[strArray[i]]){
+
+  //iterate through sentence
+  for (let i = 0; i < strArray.length; i++) {
+    
+    //if letter not a key.. intialize as key and pass on array at index
+    if (!result[strArray[i]]) {
       result[strArray[i]] = [i];
-    } else {
+    } else { //push index to key in object
       result[strArray[i]].push(i);
     }
 
