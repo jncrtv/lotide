@@ -8,7 +8,9 @@ const assertEqual = function(actual, expected) {
   }
 };
 
+
 const countLetters = function(str) {
+ 
   let tempArr = str.split('');
   let strArray = [];
 

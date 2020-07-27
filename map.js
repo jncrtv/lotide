@@ -25,7 +25,7 @@ const map = (arr, callBack) => {
   }
 
   return results;
-};
+}
 
 const words = ["ground", "control", "to", "major", "tom"];
 
