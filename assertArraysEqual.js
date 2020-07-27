@@ -1,19 +1,32 @@
-const assertArraysEqual = function(actual, expected) {
-  
-  let checkmark = String.fromCodePoint(0x2705);
-  let errormark = String.fromCodePoint(0x274C);
-
-  for (let i = 0; i < actual.length; i++) {
-    if (actual[i] !== expected[i]) {
-      console.log(`${errormark} Assertion Failed: ${actual} !== ${expected}`);
-      return;
-    }
+const printAssert = function(flag, actual, expected) {
+  if (flag) {
+    console.log(`✅✅✅ Assertion Passed: ${actual} === ${expected}`);
+  } else {
+    console.log(`🛑🛑🛑 Assertion Failed: ${actual} !== ${expected}`);
   }
-  console.log(`${checkmark} Assertion Passed: ${actual} === ${expected}`);
-  return;
+}
+
+const assertArraysEqual = function(actual, expected) {
+  if (Array.isArray(actual) && Array.isArray(expected)) {
+    let flag = false;
+    if (actual.length === expected.length){
+
+      flag = true;
+
+      for (let i = 0; i < actual.length; i++) {
+        if (actual[i] !== expected[i]) {
+          flag = false;
+        }
+      }
+    }
+    printAssert(flag, actual, expected);
+
+  } else {
+    console.log(`🚧🚧🚧 Arrays undefined actual: ? ${actual} --- expected: ? ${expected}.`);
+  }
 };
 
-assertArraysEqual([1, 2, 3], [1, 2, 3], true);
-assertArraysEqual([1, 2, 3], [1, 0, 3], false);
-assertArraysEqual([1, 2, 3], [], false);
-assertArraysEqual([], [], true);
+
+
+module.exports = assertArraysEqual;
+
