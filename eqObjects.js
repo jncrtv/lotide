@@ -45,22 +45,23 @@ const eqObjects = function(actual, expected) {
   }
 };
 
+module.exports = eqObjects;
 
 
-const ab = { a: "1", b: "2" };
-const ba = { b: "2", a: "1" };
-eqObjects(ab, ba); // => true
+// const ab = { a: "1", b: "2" };
+// const ba = { b: "2", a: "1" };
+// eqObjects(ab, ba); // => true
 
-const abc = { a: "1", b: "2", c: "3" };
-eqObjects(ab, abc); // => false
+// const abc = { a: "1", b: "2", c: "3" };
+// eqObjects(ab, abc); // => false
 
-const abcd = { a: "1", b: "2", c: "3" , d: "4"};
-eqObjects(abcd, abc); // => false
+// const abcd = { a: "1", b: "2", c: "3" , d: "4"};
+// eqObjects(abcd, abc); // => false
 
-const cd = { c: "1", d: ["2", 3] };
-const dc = { d: ["2", 3], c: "1" };
-eqObjects(cd, dc); // => true
-console.log(cd,dc);
-const cd2 = { c: "1", d: ["2", 3, 4] };
-eqObjects(cd, cd2); // => false
-console.log(cd,cd2);
+// const cd = { c: "1", d: ["2", 3] };
+// const dc = { d: ["2", 3], c: "1" };
+// eqObjects(cd, dc); // => true
+// console.log(cd,dc);
+// const cd2 = { c: "1", d: ["2", 3, 4] };
+// eqObjects(cd, cd2); // => false
+// console.log(cd,cd2);

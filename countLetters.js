@@ -1,12 +1,12 @@
-const assertEqual = function(actual, expected) {
-  let checkmark = String.fromCodePoint(0x2705);
-  let errormark = String.fromCodePoint(0x274C);
-  if (actual === expected) {
-    console.log(`${checkmark} Assertion Passed: ${actual} === ${expected}`);
-  } else {
-    console.log(`${errormark} Assertion Failed: ${actual} !== ${expected}`);
-  }
-};
+// const assertEqual = function(actual, expected) {
+//   let checkmark = String.fromCodePoint(0x2705);
+//   let errormark = String.fromCodePoint(0x274C);
+//   if (actual === expected) {
+//     console.log(`${checkmark} Assertion Passed: ${actual} === ${expected}`);
+//   } else {
+//     console.log(`${errormark} Assertion Failed: ${actual} !== ${expected}`);
+//   }
+// };
 
 
 const countLetters = function(str) {
@@ -32,13 +32,14 @@ const countLetters = function(str) {
   return result;
 };
 
+module.exports = countLetters;
 
 
-const result1 = countLetters("lighthouse in the house");
+// const result1 = countLetters("lighthouse in the house");
 
 
-console.log(assertEqual(result1["h"], 4));
-console.log(assertEqual(result1["i"], 2));
-console.log(assertEqual(result1["l"], 1));
-console.log(assertEqual(result1[" "], undefined));
-console.log(assertEqual(result1["2"], undefined));
+// console.log(assertEqual(result1["h"], 4));
+// console.log(assertEqual(result1["i"], 2));
+// console.log(assertEqual(result1["l"], 1));
+// console.log(assertEqual(result1[" "], undefined));
+// console.log(assertEqual(result1["2"], undefined));
