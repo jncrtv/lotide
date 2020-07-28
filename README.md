@@ -26,6 +26,19 @@ This project was created and published by @jncrtv as part of my learnings at Lig
 
 The following functions are currently implemented:
 
-* `function1(...)`: description
-* `function2(...)`: description
-* `function3(...)`: description
+* `head`: returns first item of array
+* `tail`: returns tail of array 
+* `middle`: returns mean of middle of array if even or middle value if odd
+* `without`: 
+* `takeUntil`:
+* `map`:
+* `letterPositions`:
+* `findKeyByValue`:
+* `findKey`:
+* `eqObjects`:
+* `eqArrays`:
+* `countOnly`:
+* `countLetters`:
+* `assertObjectsEqual`:
+* `assertEqual`:
+* `assertArraysEqual`:
